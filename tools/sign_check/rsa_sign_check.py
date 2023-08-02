@@ -1,3 +1,6 @@
+"""
+RSA签名及签名验证
+"""
 import base64
 from Crypto.PublicKey import RSA
 from Crypto.Hash import SHA
@@ -23,7 +26,7 @@ def rsa_private_sign(data: str) -> str:
     """
     私钥签名
     """
-    private_key = get_key('rsa_private_key.pem')
+    private_key = get_key('../encrypt_decrypt/rsa_private_key.pem')
     signer = PKCS1_signature.new(private_key)
     digest = SHA.new()
     digest.update(data.encode('utf-8'))
@@ -37,7 +40,7 @@ def rsa_public_check_sign(text: str, sign: str) -> bool:
     """
     公钥验证签名
     """
-    public_key = get_key('rsa_public_key.pem')
+    public_key = get_key('../encrypt_decrypt/rsa_public_key.pem')
     verifier = PKCS1_signature.new(public_key)
     digest = SHA.new()
     digest.update(text.encode('utf-8'))
