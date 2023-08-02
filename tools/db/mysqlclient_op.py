@@ -1,3 +1,7 @@
+"""
+支持Python3的mysqlclient,继承自Python2的MySQLdb
+用C实现,性能比pymysql好
+"""
 import MySQLdb
 import MySQLdb.cursors as cors
 

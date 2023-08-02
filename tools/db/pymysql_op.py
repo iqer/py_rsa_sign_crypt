@@ -1,3 +1,7 @@
+"""
+pymysql
+纯Python实现的mysql客户端,数据流大时性能较mysqlclient差距较大
+"""
 import pymysql
 import pymysql.cursors as curs
 
