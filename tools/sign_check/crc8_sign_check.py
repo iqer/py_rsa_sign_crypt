@@ -8,7 +8,7 @@ from crcmod import predefined
 
 class CRCGenerator(object):
     def __init__(self):
-        self.module = 'crc-8-maxim'
+        self.module = 'crc-8'
 
     def create(self, input_data: str) -> str:
         crc8 = predefined.Crc(self.module)
